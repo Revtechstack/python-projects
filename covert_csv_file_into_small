@@ -1,0 +1,9 @@
+import pandas as pd
+
+df = pd.read_csv("newyork_city_data_pipeline.csv")
+
+small_df = df.sample(n=10000, random_state=42)
+
+small_df.to_csv("newyork_city_data_pipeline_small.csv", index=False)
+
+print("Done")
